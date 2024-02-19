@@ -1,0 +1,55 @@
+// find largest element in an array using brute froce , better and optimal approaches
+
+//1> brute force
+
+// in this approach after sorting by any method like merg , bubble.or selection sort 
+// the time complexity will be N(logN);//
+// to sort the array 
+//** we know the the lagest lement in an sorted array will definatly (n-1) th index no;
+
+
+
+#include<bits/stdc++.h>
+#include<iostream>
+using namespace std;
+int main(){
+    int n;
+    cin>>n;
+    int arr[n];
+    for(int i=0;i<n;i++){
+        cin>>arr[i];
+    }
+    sort(arr,arr+n);
+    cout<<arr[n-1];
+
+     
+return 0;
+}
+
+/// there will be no better approach for this solution 
+
+// ******* the optimal approach will by 
+// lets take arr[0] as a largest elemt then by comparing with i+1 elment (assum i=0; initial) 
+// 
+#include<bits/stdc++.h>
+#include<iostream>
+using namespace std;
+int main(){
+    int n;
+    cin>>n;
+    int arr[n];
+    for(int i=0;i<n;i++){
+        cin>>arr[i];
+    }
+      
+      int larg=arr[0];
+      for(int i=0;i<n;i++){
+        if(arr[i]>larg){
+            larg=arr[i];
+        }
+      }
+      cout<<larg;
+
+     
+return 0;
+}
